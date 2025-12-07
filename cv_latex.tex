@@ -1,0 +1,188 @@
+%-----------------------------------------------------------------------
+% Professional Résumé Template (LaTeX)
+% Author: Milos Saric  |  https://saricmilos.com/
+% License: MIT
+%
+% Description:
+%   This document constitutes the source code for a professionally
+%   typeset résumé/CV prepared in LaTeX. It is designed with clarity,
+%   typographic consistency, and extensibility in mind. Users are
+%   welcome to adapt, modify, and redistribute this template in
+%   accordance with the terms of the MIT License.
+%
+%-----------------------------------------------------------------------
+
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[pdftex]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{fontawesome5}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.375in}
+\addtolength{\evensidemargin}{-0.375in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2}
+  }
+}
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{
+  \begin{itemize}[leftmargin=*, noitemsep, topsep=0pt, parsep=0pt, partopsep=0pt]
+}
+\newcommand{\resumeItemListEnd}{\end{itemize}}
+\newcommand{\resumeCompactListStart}{
+  \begin{itemize}[leftmargin=*, noitemsep, topsep=0pt, parsep=0pt, partopsep=0pt]
+}
+\newcommand{\resumeCompactListEnd}{\end{itemize}}
+% Compact description for Experience, slightly lower than the title
+
+
+% Define social links
+\newcommand{\socials}{
+  \faGithub~\href{https://github.com/saricmilos}{GitHub} \quad
+  \faLinkedin~\href{https://www.linkedin.com/in/milos-saric-753772237/}{LinkedIn} \quad
+  \faGlobe~\href{https://www.saricmilos.com}{saricmilos.com} \quad
+  \faYoutube~\href{https://www.youtube.com/@saricmilos}{YouTube}
+}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%-------------------- HEADER --------------------%
+\begin{center}
+    {\Large \textbf{Miloš Andrija Sarić}}\\[-1pt]
+    Barcelona, Spain • +34 11111111 • \href{mailto:info@saricmilos.com}{info@saricmilos.com} \\
+    \socials
+\end{center}
+
+
+%-----------EDUCATION-----------------
+\section{Education}
+\resumeSubHeadingListStart
+
+  \resumeSubheading
+    {Universitat Politècnica de Catalunya — ETSEIB}
+    {Barcelona, Spain}
+    {Master of Science in Power Systems; Minor in Artificial Intelligence \newline
+    \textit{ CGPA: 7.9/10}}
+    {\mbox{Sep. 2024 \textendash Dec. 2025}}
+
+  \resumeSubheading
+    {University of Novi Sad — Faculty of Technical Sciences}
+    {Novi Sad, Serbia}
+    {Bachelor with Honors in Electrical and Computer Engineering \newline
+    \textit{ CGPA: 8.1/10}}
+    {\mbox{Sep. 2017 \textendash Feb. 2024}}
+
+\resumeSubHeadingListEnd
+
+%-----------EXPERIENCE-----------------
+\section{Experience}
+\resumeSubHeadingListStart
+
+  % Job 1
+  \item
+    \textbf{University of Novi Sad, Smart Grid Laboratory} — \textit{Novi Sad, Serbia} \\
+    \textbf{Teaching Assistant} \hfill \textit{Feb 2024 - Sep 2024} \\[-2pt]
+    \small{Served as a mentor providing support to 5+ students weekly, offering individualized assistance with challenging concepts within the Analysis of Power Systems course, leading to a 10\% rise in student participation; guided students through hands-on laboratory exercises, ensured fair assessment, and collaborated with faculty to enhance course delivery.}
+
+  % Job 2
+  \item
+    \textbf{ITEN Engineering} — \textit{Novi Sad, Serbia} \\
+    \textbf{Power Systems Intern} \hfill \textit{Jun 2023 - Sep 2023} \\[-2pt]
+    \small{Contributed to grid integration and impact analysis of Qatar's first large-scale solar PV plant; developed and delivered over 10 technical presentations translating complex smart grid concepts into actionable strategies; engaged with 20+ team members to enhance understanding and implementation.}
+
+\resumeSubHeadingListEnd
+
+
+
+%-----------PROJECTS-----------------
+\section{Projects}
+  \resumeSubHeadingListStart
+    \resumeSubItem{Book Recommender System Using Collaborative and Content-Based Filtering Techniques (Nov, 2025)}
+      {Developed a personalized book recommender system by creating an item-item similarity matrix using cosine similarity, enhancing recommendation relevance and accuracy. Produced a comprehensive technical report, deployed the system online: \href{https://saricmilos.com/book-recommender/}{https://saricmilos.com/book-recommender/}, \href{https://github.com/saricmilos/what-else-should-I-read}{https://github.com/saricmilos/what-else-should-I-read}. }
+    \resumeSubItem{Advanced State Estimation in Distribution Networks Using Graph and Physics-Informed Neural Networks (Sep, 2025)}
+      {Pioneered the integration of graph neural networks with physics-based power system models, enhancing state estimation accuracy by 12\% and enabling more reliable grid monitoring capabilities.,Produced detailed technical report and presentation, translating complex research into actionable insights for smart grid. }
+    \resumeSubItem{Forecasting Electricity Prices with Advanced Machine Learning Regression Techniques (Dec, 2024)}
+      { Modeled regression-based machine learning algorithms for precise electricity price forecasting within fluctuating energy markets, implemented time series analysis, feature engineering, and data preprocessing to capture complex market patterns, Conducted model validation, performance evaluation, and hyperparameter tuning for robust and reliable predictions.}
+    \resumeSubItem{Interactive Web Platform for AI, Machine Learning, and Power Systems Applications (May, 2025 - Present)}
+      { Leveraged modern web technologies (HTML, CSS, JavaScript) to build a responsive, modern user-friendly interface, Designed Python-based educational modules with tutorials, exercises, and cheat sheets to teach data-driven modeling, computational algorithms, and AI workflows. \href{https://saricmilos.com/}{https://saricmilos.com/}.}
+  \resumeSubHeadingListEnd
+
+%--------TECHNICAL SKILLS------------
+\section{Technical Skills}
+\resumeCompactListStart
+
+  \item{ \textbf{Data Science \& ML (Advanced)}: Python, NumPy, Pandas, Scikit-Learn, Matplotlib, Seaborn; Learning PyTorch }
+  \item{ \textbf{Backend (Advanced)}: Docker, FastAPI, Postman; \textbf{Front-End (Proficient)}: PHP, JavaScript, HTML/CSS }
+  \item{ \textbf{Text, Photo \& Video (Advanced)}: LaTeX, Adobe After Effects, DaVinci Resolve, MS Office }
+  \item{ \textbf{Power Systems (Familiar)}: MATLAB, Simulink, PSS/E, ETAP, GridCal/Pandapower }
+
+\resumeCompactListEnd
+
+%--------SOFT SKILLS------------
+\section{Soft Skills}
+\resumeCompactListStart
+
+  \item{ \textbf{Presentation, Storytelling \& Communication}: Clear and engaging delivery; ability to simplify complex topics for diverse audiences }
+  \item{ \textbf{Languages}: English, Serbian (Fluent); Spanish (Elementary) }
+
+\resumeCompactListEnd
+
+
+
+
+
+
+
+%-------------------------------------------
+\end{document}
